@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hooper's Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('gym.jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        .left img {
+            width: 100px;
+            filter: invert(100%);
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar li {
+            font-size: 18px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: grey;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 8px 16px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 4px solid black;
+            margin: 50px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .container h1 {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .btn {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="logo.png" alt="Hooper's Paradise Logo">
+            <div>Hooper's Paradise</div>
+        </div>
+        <ul class="navbar">
+            <li><a href="#home" class="action">Home</a></li>
+            <li><a href="aboutus.html" target="_blank">About Us</a></li>
+            <li><a href="https://www.facebook.com/srijan.karki.1769" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/sreej_karkee/" target="_blank">Instagram</a></li>
+        </ul>
+        <div class="right">
+            <button class="btn" aria-label="Call Us Now">Call Us Now</button>
+            <button class="btn" aria-label="Email Us">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Fill up to continue</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email Id">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your Phone Number">
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
